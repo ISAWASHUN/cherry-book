@@ -1,1 +1,1 @@
-# cherry-book
+# Rubyの入門書であるチェリー本のテストをRspecで書いていみました
