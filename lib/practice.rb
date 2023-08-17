@@ -1,17 +1,14 @@
-module Loggable
-  def log(text)
-    puts "[LOG] #{text}"
+def currency_of(country)
+  case country
+  when :japan
+    'yen'
+  when :us
+    'dollar'
+  when :india
+    'rupee'
+  else
+    raise ArgumentError, "無効な国名です。#{country}"
   end
 end
 
-class Product
-  #上で作ったmoduleをincludeする
-  extend Loggable
-
-  def self.create_products(names)
-    log 'create_products is called.'
-  end
-end
-
-Product.create_products([])
-Product.log('Hello.')
+currency_of(:italy)
